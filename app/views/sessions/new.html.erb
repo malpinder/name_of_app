@@ -1,0 +1,24 @@
+<% provide(:title, 'Sign in') %>
+ <div class="page">
+ <div class="container">  
+
+ <h2 class="signinheader">Sign In To Get In</h2>
+ <%= link_to image_tag('bouncer.png') %>
+
+<div class=" signin pull-right row">
+  <div class="span6">
+
+  <%= form_for(:session, url: sessions_path) do |f| %>  
+  <%= f.label :email %>
+  <%= f.text_field :email, class: "signinForm" %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password, class: "signinForm" %>
+  <br />
+   <%= f.submit "Let me in", class: "btn btn-small btn-primary" %>
+  <% end %>
+  <p>New User? <%= link_to "Sign Up Now", "#" %></p>
+</div>
+</div>  
+</div>
+</div>
